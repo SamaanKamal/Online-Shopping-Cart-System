@@ -5,15 +5,18 @@ public class Product {
     private String description;
     private double price;
     private int stockQuantity;
+    private String category;
+
 
     public Product() {
     }
 
-    public Product(String name, String description, double price, int stockQuantity) {
+    public Product(String name, String description, double price, int stockQuantity,String category) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.stockQuantity = stockQuantity;
+        this.category = category;
     }
 
     public String getName() {
@@ -48,6 +51,14 @@ public class Product {
         this.stockQuantity = stockQuantity;
     }
 
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
@@ -55,6 +66,7 @@ public class Product {
                 ", description='" + description + '\'' +
                 ", price=" + price +
                 ", stockQuantity=" + stockQuantity +
+                ", category='" + category + '\'' +
                 '}';
     }
 }
